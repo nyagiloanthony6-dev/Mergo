@@ -1,5 +1,5 @@
 -- =====================================================================
--- Cargo Consol — LCL consolidation & FCL shipping
+-- Mergo — LCL consolidation & FCL shipping
 -- Initial schema (multi-tenant, Supabase / PostgreSQL 15+)
 -- All money is stored in USD. TZS payments are converted with an FX rate.
 -- =====================================================================

@@ -1,9 +1,9 @@
-# Cargo Consol — LCL consolidation & FCL shipping
+# Mergo — LCL consolidation & FCL shipping
 
 Multi-tenant web app for freight forwarders shipping from overseas origins (China, India, Dubai …) to Dar es Salaam.
 Built with **Next.js 15 (App Router) + Supabase (Postgres, Auth, Storage) + Tailwind**.
 
-> "Cargo Consol" is a working name — change `NEXT_PUBLIC_APP_NAME`.
+> White-label: set `NEXT_PUBLIC_APP_NAME` to change the displayed name.
 
 ## The flow
 

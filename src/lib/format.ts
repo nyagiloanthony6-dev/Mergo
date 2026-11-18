@@ -1,4 +1,4 @@
-export const APP_NAME = process.env.NEXT_PUBLIC_APP_NAME || "Cargo Consol";
+export const APP_NAME = process.env.NEXT_PUBLIC_APP_NAME || "Mergo";
 
 export const usd = (n: number | string | null | undefined) =>
   "$" + Number(n ?? 0).toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
