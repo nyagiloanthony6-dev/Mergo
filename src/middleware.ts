@@ -1,7 +1,7 @@
 import { createServerClient } from "@supabase/ssr";
 import { NextResponse, type NextRequest } from "next/server";
 
-const PUBLIC_PATHS = ["/login", "/track"];
+const PUBLIC_PATHS = ["/login", "/track", "/auth"];
 
 export async function middleware(request: NextRequest) {
   let response = NextResponse.next({ request });
@@ -29,8 +29,9 @@ export async function middleware(request: NextRequest) {
   const isPublic = PUBLIC_PATHS.some((p) => path === p || path.startsWith(p + "/"));
   if (!user && !isPublic) {
     const url = request.nextUrl.clone();
+    const supaError = request.nextUrl.searchParams.get("error_description");
     url.pathname = "/login";
-    url.search = "";
+    url.search = supaError ? "?error=" + encodeURIComponent(supaError) : "";
     return NextResponse.redirect(url);
   }
   return response;
